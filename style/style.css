@@ -118,7 +118,7 @@ body {
 }
 
 .fa-home:hover {
-    color: #d6b161 !important;
+    color: #d6b161 ;
 }
 
 
@@ -128,8 +128,8 @@ body {
     background: radial-gradient(rgb(190, 181, 181), rgb(117, 117, 117));
 }
 
-/* about section */
-.home {
+/* index section */
+.index {
     height: 969px;
     background: url(../pic/aboutMe.jpg);
     background-clip: border-box;
@@ -147,6 +147,12 @@ body {
     text-align: center;
     border-radius: 5px;
     background-color:rgba(253, 253, 253, 0.7);
+}
+
+.divLine {
+    border-bottom: #d6b161 4px solid;
+    width: 20%;
+    margin: 10px auto;
 }
 
 .cardTitle {
