@@ -129,11 +129,15 @@ table {
     border-spacing: 0;
 }
 
-/*-------------------------------*/
+/*-------------------------css reset--------------------------------*/
 
 * {
     box-sizing: border-box;
     font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
+}
+
+*::after, *::before {
+    box-sizing: border-box;
 }
 
 .clearfix {
