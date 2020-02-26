@@ -47,7 +47,7 @@ table {
 
 * {
     box-sizing: border-box;
-    font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體' !important;
+    font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
 }
 
 *::after, *::before {
@@ -55,8 +55,8 @@ table {
 }
 
 body {
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto !important;
 }
 
 .clearfix {
@@ -64,25 +64,26 @@ body {
 }
 
 .wrap {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .header {
-    max-width: 1024px;
+    max-width: 100%;
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: black;
     position: fixed;
     opacity: 0.7;
+    z-index: 999;
+    font-family: arial;
 }
 
 .home {
     float: left;
-    margin-left: 20px;
+    margin-left: 2%;
     text-transform: capitalize;
-    padding: 10px;
-}
+    padding: 12px 10px 12px 10px;}
 
 .topNav {
     float: right;
@@ -97,8 +98,7 @@ body {
 .topNav li {
     text-transform: capitalize;
     float: left;
-    padding: 10px;
-    
+    padding: 12px 10px 12px 10px;    
 }
 
 .header a {
@@ -117,31 +117,64 @@ body {
     padding-bottom: 2px;  
 }
 
+.fa-home:hover {
+    color: #d6b161 !important;
+}
 
 
-.content {
+
+.fullpage {
     height: 600px;
     background: radial-gradient(rgb(190, 181, 181), rgb(117, 117, 117));
 }
 
-.aboutMe {
-    height: 500px;
+/* about section */
+.home {
+    height: 969px;
+    background: url(../pic/aboutMe.jpg);
+    background-clip: border-box;
+    background-size: 100% 969px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.myText {
+    background-color: white;
+    display: grid;
+    margin: 0 auto;
+    width: 50%;
+    height: 25%;
+    text-align: center;
+    border-radius: 5px;
+    background-color:rgba(253, 253, 253, 0.7);
+}
+
+.cardTitle {
+    font-size: 2rem;
+    padding: 2%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #272626;
+}
+
+.about {
+    height: 969px;
     background-color: green;
 }
-.experience {
-    height: 500px;
+.exp {
+    height: 969px;
     background-color: yellow;
 }
 .skill {
-    height: 500px;
+    height: 969px;
     background-color: red;
 }
 .task {
-    height: 500px;
+    height: 969px;
     background-color: blue;
 }
 .contact {
-    height: 500px;
+    height: 969px;
     background-color: grey;
 }
 
