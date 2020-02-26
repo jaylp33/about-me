@@ -47,7 +47,7 @@ table {
 
 * {
     box-sizing: border-box;
-    font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體';
+    font-family: Spoqa Han Sans,Spoqa Han Sans JP,Noto Sans Korean,sans-serif,arial,Microsoft JhengHei,'微軟正黑體' !important;
 }
 
 *::after, *::before {
@@ -56,6 +56,7 @@ table {
 
 body {
     max-width: 1024px;
+    margin: 0 auto;
 }
 
 .clearfix {
@@ -69,6 +70,7 @@ body {
 
 
 .header {
+    max-width: 1024px;
     width: 100%;
     height: 40px;
     background: black;
@@ -120,9 +122,28 @@ body {
 
 .content {
     height: 600px;
-    border: 5px dotted pink;
     background: radial-gradient(rgb(190, 181, 181), rgb(117, 117, 117));
+}
 
+.aboutMe {
+    height: 500px;
+    background-color: green;
+}
+.experience {
+    height: 500px;
+    background-color: yellow;
+}
+.skill {
+    height: 500px;
+    background-color: red;
+}
+.task {
+    height: 500px;
+    background-color: blue;
+}
+.contact {
+    height: 500px;
+    background-color: grey;
 }
 
 .footer {
