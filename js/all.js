@@ -6,4 +6,16 @@ $(document).ready(function () {
         menu: '#header',
     });
 
+    anime({
+        targets: '.cardTitle polygon, path, rect',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 50 },
+        direction: 'alternate',
+        loop: false,
+          
+        
+      });
+
 });
