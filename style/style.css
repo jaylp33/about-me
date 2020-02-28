@@ -421,8 +421,8 @@ g {
 
 .timeLine .circle.babyBlue {
     background-color: #89cff0;
-    bottom: 1.5rem;
-    right: 2rem;
+    bottom: 5%;
+    right: 120%;
     -webkit-animation: r1 infinite linear 3s;
     animation: r1 infinite linear 3s;
     -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.7);
@@ -439,8 +439,8 @@ g {
 
 .timeLine .circle.orange {
     background-color: #ffb469;
-    bottom: 3.5rem;
-    right: -4.5rem;
+    bottom: 5%;
+    left: 120%;
     -webkit-animation: r3 infinite linear 5s;
     animation: r3 infinite linear 5s;
     -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.7);
@@ -610,8 +610,8 @@ g {
 }
 
 .timeLine .circle.m {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 200%;
+    height: 13%;
     font-size: .7rem;
 }
 
