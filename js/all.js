@@ -60,10 +60,31 @@ $(document).ready(function () {
         
     });
 
+    $(window).on('hashchange', function(e){
+        // Your Code goes here
+        var scroll = window.location.href;
+
+        // get section when find #
+        var urlPage = scroll.split('#');
+        console.log(urlPage[1]);
+       });
+
+    $(window).scroll(function(){
+            
+            
+        //trigger the scroll
+        $(window).scroll();//ensure if you're in current position when page is refreshed
+    })
 
 
 
+    
 
+
+    var here = document.getElementById('timeLine').pageYOffset;
+
+
+    
 
     // CardTitle Name anime
     var name = anime({

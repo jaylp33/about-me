@@ -368,10 +368,10 @@ g {
     height: 62vh;
     margin: 0 auto;
     background-color: #222;
-    -webkit-animation-name: grow;
-    animation-name: grow;
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
+    /* animation-name: grow; */
+    /* animation-duration: 4s; */
+    /* -webkit-animation-name: grow; */
+    /* -webkit-animation-duration: 4s; */
 }
 
 @-webkit-keyframes grow {
