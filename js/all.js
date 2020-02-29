@@ -1,6 +1,7 @@
 $(document).ready(function () {
-
+    bubbleTree();
     defaultAnimation();
+
 
     var windowWidth = $( window ).width();
     var liWidth = document.getElementById('topNav').offsetWidth;
@@ -15,22 +16,14 @@ $(document).ready(function () {
     if (windowWidth < '1024' ) {
         $('.topNav').css({
             'right': '-'+liWidth+'px'
-            
+
         });
     }
 
-    $(".expCard").hide();
-  
-        let bubble = [".babyBlue", ".hotPink", ".yellow", ".orange", ".green", ".purple"];
-        let card = [".translate", ".pianoClub", ".shopping", ".government", ".campaign", ".technical"];
-        for(let i=0; i<6; i++) {
-            $(bubble[i]).hover(function() {
-            $(card[i]).fadeIn(60);
-            }, 
-            function() {
-            $(card[i]).fadeOut(60);
-            });
-        };
+
+
+
+
 
 
     // HambergerMenu
@@ -53,10 +46,10 @@ $(document).ready(function () {
         }
     });
 
-    
 
 
-    
+
+
 
     $(window).on('hashchange', function(e){
         // Your Code goes here
@@ -69,15 +62,15 @@ $(document).ready(function () {
 
         if (Page == 'index') {
             showName_index();
-        } 
+        }
         else if (Page == 'about') {
         }
-        
+
        });
 
     $(window).scroll(function(){
-            
-            
+
+
         //trigger the scroll
         $(window).scroll();//ensure if you're in current position when page is refreshed
     })
@@ -86,15 +79,15 @@ $(document).ready(function () {
     $(document).on('click', '#cardBtn', function(){
         $.fn.fullpage.moveSectionDown();
       });
-    
+
 
 
     var here = document.getElementById('timeLine').pageYOffset;
 
 
-    
 
-    
+
+
 
 
 
@@ -110,7 +103,7 @@ $(document).ready(function () {
             direction: 'alternate',
             loop: false
           });
-    
+
           myName.add({
               targets: '.cardTitle polygon, path, rect',
                   strokeDashoffset: [anime.setDashoffset, 0],
@@ -132,7 +125,7 @@ $(document).ready(function () {
               translateY: '-90%',
               easing: 'easeInOutSine',
               begin: function() {
-                  
+
                   $('.divLine').css({
                       'border-top': '#d6b161 4px solid'
                   });
@@ -144,7 +137,7 @@ $(document).ready(function () {
               begin: function(){
                   $('.cardDes').css({
                       'opacity': 1
-                      
+
                   });
               }
           },'+=200')
@@ -158,7 +151,7 @@ $(document).ready(function () {
               translateY: '-50%',
           }, '+=500')
     }
-    
+
    // default animation
    function defaultAnimation() {
 
@@ -166,12 +159,28 @@ $(document).ready(function () {
     var urlPage = Page.split('about-me/');
     var urlPage2 = urlPage[1].split('.');
     var onPage = urlPage2[0];
-    
-    if (onPage == 'index') {
-        showName_index();
+
+        if (onPage == 'index') {
+            showName_index();
+        }
     }
-}
-      
-      
+
+
+    function bubbleTree() {
+        $(".expCard").hide();
+
+        let bubble = [".hotPink", ".yellow", ".orange", ".green", ".purple"];
+        let card = [".coffee", ".car", ".carWash", ".domino", ".fullstack"];
+        for(let i=0; i<6; i++) {
+            $(bubble[i]).hover(function() {
+            $(card[i]).fadeIn(100);
+            },
+            function() {
+            $(card[i]).fadeOut(10);
+            });
+        };
+    }
+
+
 
 });
