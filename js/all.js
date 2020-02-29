@@ -3,17 +3,17 @@ $(document).ready(function () {
     defaultAnimation();
 
 
-    var windowWidth = $( window ).width();
+    var windowWidth = $(window).width();
     var liWidth = document.getElementById('topNav').offsetWidth;
 
     // page section
     $('#fullpage').fullpage({
-        anchors:['index', 'about', 'exp', 'skill', 'task', 'contact'],
+        anchors: ['index', 'about', 'exp', 'skill', 'task', 'contact'],
         scrollOverflow: true,
         menu: '#header',
     });
 
-    if (windowWidth < '1024' ) {
+    if (windowWidth < '1024') {
         $('.topNav').css({
             'right': '-'+liWidth+'px'
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 
     // HambergerMenu
-    $(document).on('click', '.hamburgerMenu', function() {
+    $(document).on('click', '.hamburgerMenu', function () {
 
         if ($(this).hasClass('.hamburgerActive')) {
             $('.topNav').removeClass('.hamburgerActive');
@@ -41,7 +41,7 @@ $(document).ready(function () {
             $('.hamburgerMenu').addClass('.hamburgerActive');
 
             $('.mobileMenu').css({
-                'right' : liWidth + 'px'
+                'right': liWidth + 'px'
             })
         }
     });
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
 
         //trigger the scroll
-        $(window).scroll();//ensure if you're in current position when page is refreshed
+        $(window).scroll(); //ensure if you're in current position when page is refreshed
     })
 
 
