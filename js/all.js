@@ -185,7 +185,7 @@ $(document).ready(function () {
     console.log(onPage);
 
 
-        if (onPage == 'index') {
+        if (onPage == '' || onPage == 'index') {
             showName_index();
         }
     }
