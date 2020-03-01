@@ -64,6 +64,10 @@ $(document).ready(function () {
             showName_index();
         }
         else if (Page == 'about') {
+
+        }
+        else if (Page == 'exp') {
+            treeBubble();
         }
 
        });
@@ -86,13 +90,14 @@ $(document).ready(function () {
 
 
 
-    treeBubble();
 
     function treeBubble() {
 
         let treeBubble = anime.timeline ({
             direction: 'alternate',
-            loop: true
+            loop: false,
+            autoplay: true,
+
         })
 
         treeBubble.add({
@@ -100,10 +105,48 @@ $(document).ready(function () {
             height: '62vh',
             duration: 2500,
             easing: 'easeInOutQuad',
-            direction: 'alternate',
-            autoplay: true,
             loop:false
         })
+        .add({
+            //orange 2014 Circle
+            targets: '.l',
+            opacity: 1,
+            duration: 300,
+            begin:function() {
+                $('.l').css({
+                    'display': 'flex',
+                });
+            },
+        }, '-=2000')
+        .add({
+            //bg7
+            targets: '.bg-7',
+            opacity: 1,
+            duration: 300,
+            
+        }, '-=2000')
+        .add({
+            //pink
+            targets: '.hotPink',
+            opacity: 1,
+            duration: 300,
+            
+        }, '-=1400')
+        .add({
+            //blue
+            targets: '.bg-5',
+            opacity: 1,
+            duration: 300,
+            
+        }, '-=1400')
+        .add({
+            //brown
+            targets: '.bg-1',
+            opacity: 1,
+            duration: 300,
+            
+        }, '-=1300')
+
     }
 
 
@@ -179,10 +222,6 @@ $(document).ready(function () {
     var urlPage2 = urlPage[1].split('.');
     var onPage = urlPage2[0];
 
-    console.log(Page);
-    console.log(urlPage);
-    console.log(urlPage2);
-    console.log(onPage);
 
 
         if (onPage == '' || onPage == 'index') {
