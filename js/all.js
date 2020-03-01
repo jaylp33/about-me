@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    bubbleTree();
+    bubbleTreeCard();
     defaultAnimation();
 
 
@@ -86,18 +86,27 @@ $(document).ready(function () {
 
 
 
+    treeBubble();
+
+    function treeBubble() {
+
+        let treeBubble = anime.timeline ({
+            direction: 'alternate',
+            loop: true
+        })
+
+        treeBubble.add({
+            targets: '.line',
+            height: '62vh',
+            duration: 2500,
+            easing: 'easeInOutQuad',
+            direction: 'alternate',
+            autoplay: true,
+            loop:false
+        })
+    }
 
 
-
-    anime({
-        targets: '.line',
-        height: ['0vh','62vh'],
-        duration: 2500,
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        autoplay: true,
-        loop:false
-    })
     
 
 
@@ -170,13 +179,19 @@ $(document).ready(function () {
     var urlPage2 = urlPage[1].split('.');
     var onPage = urlPage2[0];
 
+    console.log(Page);
+    console.log(urlPage);
+    console.log(urlPage2);
+    console.log(onPage);
+
+
         if (onPage == 'index') {
             showName_index();
         }
     }
 
 
-    function bubbleTree() {
+    function bubbleTreeCard() {
         $(".expCard").hide();
 
         let bubble = [".hotPink", ".yellow", ".orange", ".green", ".purple"];

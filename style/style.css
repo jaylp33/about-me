@@ -895,8 +895,10 @@ hr {
 }
 
 .col-4 {
-    width: 30rem;
+    width: 20%;
+    overflow: hidden;
     float: left;
+    min-width: 20rem;
 }
 
 .col-12 {
