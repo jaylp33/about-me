@@ -411,7 +411,7 @@ g {
 
 .timeLine .line {
     width: .5rem;
-    height: 62vh;
+    height: 0vh;
     margin: 0 auto;
     background-color: #222;
     /* animation-name: grow; */
@@ -486,7 +486,7 @@ g {
 .timeLine .circle.orange {
     background-color: #ffb469;
     bottom: 5%;
-    left: 120%;
+    left: 24px;
     -webkit-animation: r3 infinite linear 5s;
     animation: r3 infinite linear 5s;
     -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.7);
@@ -600,7 +600,7 @@ g {
 .timeLine .circle.bg-4 {
     background-color: #FFCA28;
     bottom: 15rem;
-    right: -2rem;
+    right: -1rem;
     -webkit-animation: r1 infinite linear 3s;
     animation: r1 infinite linear 3s;
 }
@@ -623,8 +623,8 @@ g {
 
 .timeLine .circle.bg-7 {
     background-color: #9E9E9E;
-    bottom: 5rem;
-    right: 7rem;
+    bottom: 2rem;
+    right: 3rem;
     -webkit-animation: r4 infinite linear 6s;
     animation: r4 infinite linear 6s;
 }
@@ -632,7 +632,7 @@ g {
 .timeLine .circle.bg-8 {
     background-color: #69F0AE;
     bottom: 15rem;
-    right: 7rem;
+    right: 5rem;
     -webkit-animation: r4 infinite linear 10s;
     animation: r4 infinite linear 10s;
 }
@@ -656,8 +656,8 @@ g {
 }
 
 .timeLine .circle.m {
-    width: 200%;
-    height: 13%;
+    width: 3.4rem;
+    height: 3.4rem;
     font-size: .7rem;
 }
 
@@ -889,13 +889,13 @@ hr {
 }
 
 .col-3 {
-    width: 25%;
+    width: 21rem;
     float: left;
     margin: 5% auto;
 }
 
 .col-4 {
-    width: 33%;
+    width: 30rem;
     float: left;
 }
 

@@ -89,6 +89,16 @@ $(document).ready(function () {
 
 
 
+    anime({
+        targets: '.line',
+        height: ['0vh','62vh'],
+        duration: 2500,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        autoplay: true,
+        loop:false
+    })
+    
 
 
 
