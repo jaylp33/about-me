@@ -2,7 +2,6 @@ $(document).ready(function () {
     bubbleTreeCard();
     defaultAnimation();
 
-
     var windowWidth = $(window).width();
     var liWidth = document.getElementById('topNav').offsetWidth;
 
@@ -19,12 +18,6 @@ $(document).ready(function () {
 
         });
     }
-
-
-
-
-
-
 
     // HambergerMenu
     $(document).on('click', '.hamburgerMenu', function () {
@@ -45,10 +38,6 @@ $(document).ready(function () {
             })
         }
     });
-
-
-
-
 
 
     $(window).on('hashchange', function(e){
@@ -85,12 +74,6 @@ $(document).ready(function () {
       });
 
 
-
-    var here = document.getElementById('timeLine').pageYOffset;
-
-
-
-
     function treeBubble() {
 
         let treeBubble = anime.timeline ({
@@ -103,7 +86,7 @@ $(document).ready(function () {
         treeBubble.add({
             targets: '.line',
             height: '62vh',
-            duration: 2500,
+            duration: 2000,
             easing: 'easeInOutQuad',
             loop:false
         })
@@ -111,7 +94,7 @@ $(document).ready(function () {
             //orange 2014 Circle
             targets: '.l',
             opacity: 1,
-            duration: 300,
+            duration: 1000,
             begin:function() {
                 $('.l').css({
                     'display': 'flex',
@@ -122,35 +105,101 @@ $(document).ready(function () {
             //bg7
             targets: '.bg-7',
             opacity: 1,
-            duration: 300,
-            
+            duration: 2000,
+
         }, '-=2000')
         .add({
             //pink
             targets: '.hotPink',
             opacity: 1,
-            duration: 300,
-            
-        }, '-=1400')
+            duration: 2000,
+
+        }, '-=1500')
         .add({
             //blue
             targets: '.bg-5',
             opacity: 1,
-            duration: 300,
-            
-        }, '-=1400')
+            duration: 2000,
+
+        }, '-=2000')
         .add({
             //brown
             targets: '.bg-1',
             opacity: 1,
-            duration: 300,
-            
-        }, '-=1300')
+            duration: 2000,
+
+        }, '-=2000')
+        .add({
+            //small yellow
+            targets: '.bg-4',
+            opacity: 1,
+            duration: 2000
+        }, '-=1800')
+        .add({
+            //dark purple
+            targets: '.bg-2',
+            opacity: 1,
+            duration: 2000
+        }, '-=1800')
+        .add({
+            //green
+            targets: '.green',
+            opacity: 1,
+            duration: 2000
+        }, '-=1950')
+        .add({
+            //yellow
+            targets: '.yellow',
+            opacity: 1,
+            duration: 2000
+        }, '-=1900')
+        .add({
+            //light green
+            targets: '.bg-8',
+            opacity: 1,
+            duration: 2000
+        }, '-=1800')
+        .add({
+            // light red(pink)
+            targets: '.bg-9',
+            opacity: 1,
+            duration: 2000
+        }, '-=1900')
+        .add({
+            //super light green
+            targets: '.bg-6',
+            opacity: 1,
+            duration: 2000
+        }, '-=2000')
+        .add({
+            //top pink
+            targets: '.bg-3',
+            opacity: 1,
+            duration: 2000
+        }, '-=2100')
+        .add({
+            //purple m
+            targets: '.bg-10',
+            opacity: 1,
+            duration: 2000
+        }, '-=2000')
+        .add({
+            //big green
+            targets: '.bg-11',
+            opacity: 1,
+            duration: 2000
+        }, '-=2100')
+        .add({
+            //2019
+            targets: '.purple',
+            opacity: 1,
+            duration: 2000
+        }, '-=1800')
 
     }
 
 
-    
+
 
 
 
@@ -243,6 +292,24 @@ $(document).ready(function () {
             $(card[i]).fadeOut(10);
             });
         };
+    }
+
+    skillText();
+
+
+    function skillText() {
+
+        console.log('skill');
+        let skillText = anime({
+            targets: '.letter',
+            opacity: 1,
+            translateY: 10, 
+            delay: anime.stagger(50, {start: 1000}), 
+            translateX: [-250, 30],
+            translateY: [-200, 30]
+          });                
+          
+          
     }
 
 

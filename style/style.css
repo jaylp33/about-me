@@ -390,8 +390,121 @@ g {
 
 .skill {
     height: 969px;
-    background-color: red;
+    background: url(../pic/skill.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .9;
+    z-index: 1;
 }
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    color: #f7f7f7;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+
+
+.slogan {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 95%;
+    z-index: 999;
+    position: absolute;
+    top: 2%;
+    left: 40%;
+}
+
+.flexbox {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    max-height: 80%;
+    height: 100%;
+    justify-content: center; 
+    flex-wrap: wrap-reverse;   
+}
+
+.skillCard {
+    max-width: 30%;
+    width: 100%;
+    max-height: 50%;
+    margin: 1rem 1rem;
+    cursor: pointer;
+    position: relative;
+    perspective: 500;
+    -webkit-perspective: 500;
+
+}
+
+.card-item-front,
+.card-item-back {
+    background-color: #fff;
+    -webkit-perspective: 1000;
+    backface-visibility: hidden;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    overflow: hidden;
+    background-color: rgb(247,247,247,.8);
+    box-shadow: rgba(50, 50, 50, 0.2) 0 0 15px;
+    border: 1px solid white;
+    min-height: 20%;
+
+}
+
+.card-item-back {
+    position: relative;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.skillCard:hover .card-item-front {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+.skillCard:hover .card-item-back {
+    transform: rotateY(-360deg);
+    -webkit-transform: rotateY(-360deg);
+}
+
+.skillTitle {
+    font-size: 20px;
+    text-align: center;
+    color: #001f3f;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.skillImg {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.skillContent {
+
+}
+
+.imgContainer {
+    max-width: 50%;
+    max-height: auto;
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    background-size: cover;
+}
+
+
 
 .task {
     height: 969px;
@@ -531,6 +644,7 @@ g {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    opacity: 0;
 }
 
 .timeLine .circle.green:hover {
@@ -540,7 +654,7 @@ g {
 
 .timeLine .circle.yellow {
     background-color: #f7df1e;
-    bottom: 18rem;
+    bottom: 20rem;
     right: 2rem;
     -webkit-animation: r2 infinite linear 4s;
     animation: r2 infinite linear 4s;
@@ -549,6 +663,7 @@ g {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    opacity: 0;
 }
 
 .timeLine .circle.yellow:hover {
@@ -558,7 +673,7 @@ g {
 
 .timeLine .circle.purple {
     background-color: #b469ff;
-    bottom: 21rem;
+    bottom: 28rem;
     right: -5rem;
     -webkit-animation: r1 infinite linear 5s;
     animation: r1 infinite linear 5s;
@@ -567,6 +682,7 @@ g {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    opacity: 0;
 }
 
 .timeLine .circle.purple:hover {
@@ -589,14 +705,16 @@ g {
     right: 2.5rem;
     -webkit-animation: r4 infinite linear 2s;
     animation: r4 infinite linear 2s;
+    opacity: 0;
 }
 
 .timeLine .circle.bg-3 {
     background-color: #EF5350;
-    bottom: 24rem;
+    bottom: 26rem;
     right: 3rem;
     -webkit-animation: r2 infinite linear 5s;
     animation: r2 infinite linear 5s;
+    opacity: 0;
 }
 
 .timeLine .circle.bg-4 {
@@ -605,6 +723,7 @@ g {
     right: -1rem;
     -webkit-animation: r1 infinite linear 3s;
     animation: r1 infinite linear 3s;
+    opacity: 0;
 }
 
 .timeLine .circle.bg-5 {
@@ -618,10 +737,11 @@ g {
 
 .timeLine .circle.bg-6 {
     background-color: #00E676;
-    bottom: 22rem;
+    bottom: 23rem;
     right: 6rem;
     -webkit-animation: r3 infinite linear 6s;
     animation: r3 infinite linear 6s;
+    opacity: 0;
 }
 
 .timeLine .circle.bg-7 {
@@ -636,10 +756,11 @@ g {
 
 .timeLine .circle.bg-8 {
     background-color: #69F0AE;
-    bottom: 16rem;
+    bottom: 17rem;
     right: 5rem;
     -webkit-animation: r4 infinite linear 10s;
     animation: r4 infinite linear 10s;
+    opacity: 0;
 }
 
 .timeLine .circle.bg-9 {
@@ -648,6 +769,24 @@ g {
     right: -6rem;
     -webkit-animation: r2 infinite linear 3s;
     animation: r2 infinite linear 3s;
+    opacity: 0;
+}
+
+.timeLine .circle.bg-10 {
+    background-color: rgb(39, 136, 10);
+    bottom: 23rem;
+    right: -4rem;
+    -webkit-animation: r4 infinite linear 10s;
+    animation: r4 infinite linear 10s;
+    opacity: 0;
+}
+.timeLine .circle.bg-11 {
+    background-color: rgb(109, 60, 155);
+    bottom: 18rem;
+    right: -3rem;
+    -webkit-animation: r4 infinite linear 3s;
+    animation: r4 infinite linear 3s;
+    opacity: 0;
 }
 
 .timeLine .circle.xs {
@@ -840,6 +979,12 @@ g {
     margin-right: 5%;
 }
 
+.position {
+    text-transform: capitalize;
+    font-size: .9rem;
+    text-align: center;
+}
+
 .section.experience .expCard .date {
     position: absolute;
     top: 0;
@@ -872,6 +1017,7 @@ g {
     text-align: center;
     font-size: 18px;
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 .section.experience .expCard .content .des .axk {
@@ -882,6 +1028,11 @@ g {
     color: #fdfdfd;
     background-color: orange;
     letter-spacing: 0;
+}
+
+.expCard ul li {
+    list-style-type: disc;
+    margin: .8rem;
 }
 
 hr {
@@ -985,6 +1136,13 @@ hr {
     .myText2 {
         height: unset;
         max-height: 100%;
+    }
+
+    .skillCard {
+        max-width: 45%;
+        padding: 0;
+        margin: 5px;
+    
     }
 
     
