@@ -1,6 +1,8 @@
 $(document).ready(function () {
-    bubbleTreeCard();
+
+
     defaultAnimation();
+    $(".expCard").hide();
 
     var windowWidth = $(window).width();
     var liWidth = document.getElementById('topNav').offsetWidth;
@@ -12,19 +14,23 @@ $(document).ready(function () {
         menu: '#header',
     });
 
-    if (windowWidth < '1024') {
+    if (windowWidth < '900') {
         $('.topNav').css({
             'right': '-'+liWidth+'px'
-
         });
+
+    }else {
+    bubbleTreeCard();
+
     }
 
     // HambergerMenu
     $(document).on('click', '.hamburgerMenu', function () {
-
+        $('.menu-item').toggleClass('open');
         if ($(this).hasClass('.hamburgerActive')) {
             $('.topNav').removeClass('.hamburgerActive');
             $('.hamburgerMenu').removeClass('.hamburgerActive');
+            
 
             $('.mobileMenu').css({
                 'right': 0
@@ -57,13 +63,13 @@ $(document).ready(function () {
         }
         else if (Page == 'exp') {
             treeBubble();
+        } else if (Page == 'skill') {
+            skillText();
         }
 
        });
 
     $(window).scroll(function(){
-
-
         //trigger the scroll
         $(window).scroll(); //ensure if you're in current position when page is refreshed
     })
@@ -73,8 +79,93 @@ $(document).ready(function () {
         $.fn.fullpage.moveSectionDown();
       });
 
+    // index name animation
+    function showName_index() {
+        var myName = anime.timeline({
+            easing: 'easeInOutQuad',
+            direction: 'alternate',
+            loop: false
+          });
 
-    function treeBubble() {
+          myName.add({
+              targets: '.cardTitle polygon, path, rect',
+                  strokeDashoffset: [anime.setDashoffset, 0],
+                  easing: 'easeInOutSine',
+                  duration: 1500,
+                  delay: function(el, i) { return i * 10 },
+                  direction: 'alternate',
+                  loop: false,
+          })
+          .add({
+            targets: '.myName',
+            width: '100%',
+            height: '100%',
+            easing: 'easeInOutExpo',
+            duration: 1500
+          }, '-=1500')
+          .add({
+              targets: '.divLine',
+              translateY: '-90%',
+              easing: 'easeInOutSine',
+              begin: function() {
+
+                  $('.divLine').css({
+                      'border-top': '#d6b161 4px solid'
+                  });
+              }
+          }, '-=200')
+          .add({
+              targets: '.cardDes',
+              translateY: '-50%',
+              begin: function(){
+                  $('.cardDes').css({
+                      'opacity': 1
+
+                  });
+              }
+          },'+=200')
+          .add({
+              target: '.cardBtn',
+              begin: function(){
+                  $('.cardBtn').css({
+                      'opacity': 1
+                  });
+              },
+              translateY: '-50%',
+          }, '+=500')
+    }
+
+   // default animation
+   function defaultAnimation() {
+
+    var Page = window.location.href;
+    var urlPage = Page.split('about-me/');
+    var urlPage2 = urlPage[1].split('.');
+    var onPage = urlPage2[0];
+
+        if (onPage == '' || onPage == 'index') {
+            showName_index();
+        }
+    }
+
+    // Exp tree animation hover on PC view
+    function bubbleTreeCard() {
+        $(".expCard").hide();
+
+        let bubble = [".hotPink", ".yellow", ".orange", ".green", ".purple"];
+        let card = [".coffee", ".car", ".carWash", ".domino", ".fullstack"];
+        for(let i=0; i<6; i++) {
+            $(bubble[i]).hover(function() {
+            $(card[i]).fadeIn(100);
+            },
+            function() {
+            $(card[i]).fadeOut(10);
+            });
+        };
+    }
+
+     // Exp tree bubble animation
+     function treeBubble() {
 
         let treeBubble = anime.timeline ({
             direction: 'alternate',
@@ -198,120 +289,16 @@ $(document).ready(function () {
 
     }
 
-
-
-
-
-
-
-
-
-
-    // index name animation
-    function showName_index() {
-        var myName = anime.timeline({
-            easing: 'easeInOutQuad',
-            direction: 'alternate',
-            loop: false
-          });
-
-          myName.add({
-              targets: '.cardTitle polygon, path, rect',
-                  strokeDashoffset: [anime.setDashoffset, 0],
-                  easing: 'easeInOutSine',
-                  duration: 1500,
-                  delay: function(el, i) { return i * 10 },
-                  direction: 'alternate',
-                  loop: false,
-          })
-          .add({
-            targets: '.myName',
-            width: '100%',
-            height: '100%',
-            easing: 'easeInOutExpo',
-            duration: 1500
-          }, '-=1500')
-          .add({
-              targets: '.divLine',
-              translateY: '-90%',
-              easing: 'easeInOutSine',
-              begin: function() {
-
-                  $('.divLine').css({
-                      'border-top': '#d6b161 4px solid'
-                  });
-              }
-          }, '-=200')
-          .add({
-              targets: '.cardDes',
-              translateY: '-50%',
-              begin: function(){
-                  $('.cardDes').css({
-                      'opacity': 1
-
-                  });
-              }
-          },'+=200')
-          .add({
-              target: '.cardBtn',
-              begin: function(){
-                  $('.cardBtn').css({
-                      'opacity': 1
-                  });
-              },
-              translateY: '-50%',
-          }, '+=500')
-    }
-
-   // default animation
-   function defaultAnimation() {
-
-    var Page = window.location.href;
-    var urlPage = Page.split('about-me/');
-    var urlPage2 = urlPage[1].split('.');
-    var onPage = urlPage2[0];
-
-
-
-        if (onPage == '' || onPage == 'index') {
-            showName_index();
-        }
-    }
-
-
-    function bubbleTreeCard() {
-        $(".expCard").hide();
-
-        let bubble = [".hotPink", ".yellow", ".orange", ".green", ".purple"];
-        let card = [".coffee", ".car", ".carWash", ".domino", ".fullstack"];
-        for(let i=0; i<6; i++) {
-            $(bubble[i]).hover(function() {
-            $(card[i]).fadeIn(100);
-            },
-            function() {
-            $(card[i]).fadeOut(10);
-            });
-        };
-    }
-
-    skillText();
-
-
     function skillText() {
 
         console.log('skill');
         let skillText = anime({
             targets: '.letter',
             opacity: 1,
-            translateY: 10, 
-            delay: anime.stagger(50, {start: 1000}), 
-            translateX: [-250, 30],
-            translateY: [-200, 30]
-          });                
-          
-          
+            translateY: 10,
+            delay: anime.stagger(50, {start: 1000}),
+            translateX: [-550, 0],
+            translateY: [200, -200]
+          });
     }
-
-
-
 });
