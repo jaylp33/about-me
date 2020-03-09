@@ -55,6 +55,8 @@ $(document).ready(function () {
 
         Page = urlPage[1];
 
+
+
         if (Page == 'index') {
             showName_index();
         }
@@ -141,11 +143,25 @@ $(document).ready(function () {
     var Page = window.location.href;
     var urlPage = Page.split('about-me/');
     var urlPage2 = urlPage[1].split('.');
-    var onPage = urlPage2[0];
+    var pageTag = urlPage2[1].split('#');
 
-        if (onPage == '' || onPage == 'index') {
-            showName_index();
-        }
+    var onPage = pageTag[1];
+
+    console.log(onPage);
+    console.log(urlPage2);
+
+
+            if (onPage == 'index') {
+                showName_index();
+            }
+            else if (onPage == 'about') {
+
+            }
+            else if (onPage == 'exp') {
+                treeBubble();
+            } else if (onPage == 'skill') {
+                skillText();
+            }
     }
 
     // Exp tree animation hover on PC view
@@ -291,7 +307,6 @@ $(document).ready(function () {
 
     function skillText() {
 
-        console.log('skill');
         let skillText = anime({
             targets: '.letter',
             opacity: 1,
