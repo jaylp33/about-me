@@ -148,7 +148,7 @@ $(document).ready(function () {
     console.log(onPage);
 
 
-            if (onPage == '') {
+            if (onPage == '' || onPage == '#index') {
                 showName_index();
             }
             else if (onPage == '#about') {
