@@ -143,12 +143,9 @@ $(document).ready(function () {
     var Page = window.location.href;
     var urlPage = Page.split('about-me/');
     var urlPage2 = urlPage[1].split('.');
-    var pageTag = urlPage2[1].split('#');
-
-    var onPage = pageTag[1];
+    var onPage = urlPage2[0];
 
     console.log(onPage);
-    console.log(urlPage2);
 
 
             if (onPage == 'index') {
