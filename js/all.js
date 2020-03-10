@@ -148,15 +148,15 @@ $(document).ready(function () {
     console.log(onPage);
 
 
-            if (onPage == 'index') {
+            if (onPage == '') {
                 showName_index();
             }
-            else if (onPage == 'about') {
+            else if (onPage == '#about') {
 
             }
-            else if (onPage == 'exp') {
+            else if (onPage == '#exp') {
                 treeBubble();
-            } else if (onPage == 'skill') {
+            } else if (onPage == '#skill') {
                 skillText();
             }
     }
