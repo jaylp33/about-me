@@ -291,6 +291,8 @@ i {
     background-color: rgba(253, 253, 253, 0.7);
 }
 
+
+
 @media (max-width:768px) {
     .myText {
         max-width: 75%;
@@ -314,7 +316,10 @@ i {
     color: #272626;
 }
 
-.myName {}
+.myName {
+
+    transition: all .5s;
+}
 
 g {
     fill: none

@@ -91,18 +91,55 @@ $(document).ready(function () {
     
 
     // CardTitle Name anime
-    var name = anime({
-        targets: '.cardTitle polygon, path, rect',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function (el, i) {
-            return i * 50
-        },
-        direction: 'alternate',
-        loop: false,
+    // var name = anime({
+    //     targets: '.cardTitle polygon, path, rect',
+    //     strokeDashoffset: [anime.setDashoffset, 0],
+    //     easing: 'easeInOutSine',
+    //     duration: 1500,
+    //     delay: function (el, i) {
+    //         return i * 50
+    //     },
+    //     direction: 'alternate',
+    //     loop: false,
+    //     complete: function() {
+    //         $('.myName').css({
+    //             'width': '100%',
+    //             'height' : '100%'
+                
+    //         });
+    //     }
+
+    // });
+
+    var nameLine = anime.timeline({
+        easing: 'easeInOutQuad',
+        duration: 750,
+        autoplay: true
+      });
 
 
-    });
+    //   nameLine.add({
+    //     targets: '.cardTitle polygon, path, rect',
+    //     strokeDashoffset: [anime.setDashoffset, 0],
+    //     easing: 'easeInOutSine',
+    //     duration: 1500,
+    //     delay: function (el, i) {
+    //         return i * 50
+    //     },
+    //     direction: 'alternate',
+    //     loop: false,
+    //   })
+    //   .add({
+    //       targets: 'p',
+    //       translateX: '150',
+    //       width:'100%',
+    //       height:'100%'
+
+    //   });
+
+    nameLine.add({
+        targets: '.divLine',
+        translateX: 250
+    })
 
 });
